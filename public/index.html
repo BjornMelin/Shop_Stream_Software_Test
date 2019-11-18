@@ -1,0 +1,17 @@
+/**
+ * Config for Chrome browser
+ * @type {webdriver}
+ */
+var browser = new webdriver.Builder()
+ .usingServer()
+ .withCapabilities({ browserName: "chrome" })
+ .build();/**
+ * Config for Firefox browser (Comment Chrome config when you intent to test in Firefox)
+ * @type {webdriver}
+ */
+/*
+var browser = new webdriver.Builder()
+ .usingServer()
+ .withCapabilities({ browserName: "firefox" })
+ .build();
+ */
