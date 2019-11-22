@@ -8,6 +8,7 @@ const serverUri = "http://localhost:3000/#";
 
 
 
+
 describe('Log into ShopStream', function () {
     let driver;
     before(async function() {
@@ -56,6 +57,33 @@ describe('Log into ShopStream', function () {
     it('Open App Bar Drawer', async function() {
       // route to apps home dashboard
       await driver.get("http://localhost:3000/dashboard");
+      // open main menu drawer on left side of dashboard
+      driver.findElement(By.id('openMenuDrawer')).click();
+    });
+
+    it('Click On Jobs Button', async function() {
+      // open main menu drawer on left side of dashboard
+      driver.findElement(By.id('jobsButton')).click();
+    });
+
+
+    it('Open App Bar Drawer', async function() {
+      // route to apps home dashboard
+      await driver.get("http://localhost:3000/jobs");
+      // open main menu drawer on left side of dashboard
+      driver.findElement(By.id('openMenuDrawer')).click();
+    });
+
+
+    it('Click On Inventory Button', async function() {
+      // open main menu drawer on left side of dashboard
+      driver.findElement(By.id('invButton')).click();
+    });
+
+
+    it('Open App Bar Drawer', async function() {
+      // route to apps home dashboard
+      await driver.get("http://localhost:3000/inventory");
       // open main menu drawer on left side of dashboard
       driver.findElement(By.id('openMenuDrawer')).click();
     });
